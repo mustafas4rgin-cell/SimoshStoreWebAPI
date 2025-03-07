@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ez9vCWjdVohsQ7CMUqBhAhXN2f7xCQIkKYtg2HdVr+8=",
+  "Source": "SimoshStoreAPI",
+  "BasePath": "_content/SimoshStoreAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
