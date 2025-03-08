@@ -14,6 +14,13 @@ namespace MyApp.Namespace
         {
             _blogService = blogService;
         }
+        [HttpGet("/api/blog-section")]
+        public async Task<IActionResult> BlogSection()
+        {
+            var blogs = await _blogService.BlogSection();
+            return Ok(blogs);
+        }
+        
         [HttpGet("/api/blogs")]
         public async Task<IActionResult> GetBlogs()
         {

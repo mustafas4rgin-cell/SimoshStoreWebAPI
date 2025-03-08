@@ -15,6 +15,20 @@ public class ProductService : IProductService
         _Validator = validator;
         _Repository = repository;
     }
+    public async Task<IEnumerable<ProductEntity>> PopularProductsAsync(int? take)
+    {
+        var popularProducts = await _Repository.GetAll<ProductEntity>()
+                                .OrderBy(P => P.Comments.Count)
+                                .Include(P => P.Discount)
+                                .ToListAsync();
+
+        if(take.HasValue)
+        {
+            popularProducts = popularProducts.Take(take.Value).ToList();
+        }
+
+        return popularProducts;
+    }
     public async Task<IServiceResult> UpdateProductAsync(ProductDTO dto, int id)
     {
         var product = await _Repository.GetByIdAsync<ProductEntity>(id);
@@ -107,7 +121,7 @@ public class ProductService : IProductService
             .Include(p => p.Discount)
         //  .Include(p => p.Images)
             .OrderByDescending(p => p.StockAmount)
-            .Take(2)
+            .Take(7)
             .ToListAsync();
         if (!products.Any())
         {

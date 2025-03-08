@@ -1566,19 +1566,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/s4rgin/.nuget/packages/": {}
+    "C:\\Users\\MCANS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/s4rgin/Desktop/A/SimoshStoreAPI/SimoshStoreAPI.csproj",
+      "projectUniqueName": "C:\\Users\\MCANS\\Desktop\\SimoshStoreApp\\SimoshStoreWebAPI\\SimoshStoreAPI.csproj",
       "projectName": "SimoshStoreAPI",
-      "projectPath": "/Users/s4rgin/Desktop/A/SimoshStoreAPI/SimoshStoreAPI.csproj",
-      "packagesPath": "/Users/s4rgin/.nuget/packages/",
-      "outputPath": "/Users/s4rgin/Desktop/A/SimoshStoreAPI/obj/",
+      "projectPath": "C:\\Users\\MCANS\\Desktop\\SimoshStoreApp\\SimoshStoreWebAPI\\SimoshStoreAPI.csproj",
+      "packagesPath": "C:\\Users\\MCANS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MCANS\\Desktop\\SimoshStoreApp\\SimoshStoreWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/s4rgin/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\MCANS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1656,7 +1656,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

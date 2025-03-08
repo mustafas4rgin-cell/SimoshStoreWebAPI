@@ -14,6 +14,16 @@ public class BlogService : IBlogService
         _validator = validator;
         _dataRepository = dataRepository;
     }
+    public async Task<IEnumerable<BlogEntity>> BlogSection()
+    {
+        var blogs = await _dataRepository.GetAll<BlogEntity>()
+                    .Include(B => B.User)
+                    .Include(B => B.Comments)
+                    .Include(B => B.BlogCategories)
+                    .Take(6)
+                    .ToListAsync();
+        return blogs;
+    }
     public async Task<IEnumerable<BlogEntity>> GetBlogsAsync()
     {
         var blogs = await _dataRepository.GetAll<BlogEntity>()

@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using App.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -18,6 +19,13 @@ namespace MyApp.Namespace
         {
             _productService = productService;
         }
+        [HttpGet("/api/popularproducts")]
+        public async Task<IActionResult> PopularProducts([FromQuery]int? take)
+        {
+            var popularProducts = await _productService.PopularProductsAsync(take);
+            return Ok(popularProducts);
+        }
+
         [HttpGet("/api/bestproducts")]
         public async Task<IActionResult> BestProducts()
         {
